@@ -1,0 +1,763 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D1837002D1975D200FE8D19 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1836FF2D1975D200FE8D19 /* WidgetKit.framework */; };
+		1D1837022D1975D200FE8D19 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1837012D1975D200FE8D19 /* SwiftUI.framework */; };
+		1D1837132D1975D300FE8D19 /* AthanWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1D1836FD2D1975D200FE8D19 /* AthanWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1D1837112D1975D300FE8D19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DB491052CFF9D7400FDA477 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D1836FC2D1975D200FE8D19;
+			remoteInfo = AthanWidgetExtension;
+		};
+		1DB4911E2CFF9D7500FDA477 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DB491052CFF9D7400FDA477 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DB4910C2CFF9D7400FDA477;
+			remoteInfo = Athan;
+		};
+		1DB491282CFF9D7500FDA477 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DB491052CFF9D7400FDA477 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DB4910C2CFF9D7400FDA477;
+			remoteInfo = Athan;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1D1837182D1975D300FE8D19 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1D1837132D1975D300FE8D19 /* AthanWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1D1836FD2D1975D200FE8D19 /* AthanWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AthanWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D1836FF2D1975D200FE8D19 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		1D1837012D1975D200FE8D19 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		1D18371A2D1981CA00FE8D19 /* AthanWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AthanWidgetExtension.entitlements; sourceTree = "<group>"; };
+		1DB4910D2CFF9D7400FDA477 /* Athan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Athan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DB4911D2CFF9D7500FDA477 /* AthanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AthanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DB491272CFF9D7500FDA477 /* AthanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AthanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1D1837142D1975D300FE8D19 /* Exceptions for "AthanWidget" folder in "AthanWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				athanpic.jpeg,
+				Info.plist,
+			);
+			target = 1D1836FC2D1975D200FE8D19 /* AthanWidgetExtension */;
+		};
+		1D18371B2D1983DE00FE8D19 /* Exceptions for "AthanWidget" folder in "Athan" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				athanpic.jpeg,
+			);
+			target = 1DB4910C2CFF9D7400FDA477 /* Athan */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		1D1837032D1975D200FE8D19 /* AthanWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1D18371B2D1983DE00FE8D19 /* Exceptions for "AthanWidget" folder in "Athan" target */,
+				1D1837142D1975D300FE8D19 /* Exceptions for "AthanWidget" folder in "AthanWidgetExtension" target */,
+			);
+			path = AthanWidget;
+			sourceTree = "<group>";
+		};
+		1DB4910F2CFF9D7400FDA477 /* Athan */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Athan;
+			sourceTree = "<group>";
+		};
+		1DB491202CFF9D7500FDA477 /* AthanTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = AthanTests;
+			sourceTree = "<group>";
+		};
+		1DB4912A2CFF9D7500FDA477 /* AthanUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = AthanUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D1836FA2D1975D200FE8D19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D1837022D1975D200FE8D19 /* SwiftUI.framework in Frameworks */,
+				1D1837002D1975D200FE8D19 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DB4910A2CFF9D7400FDA477 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DB4911A2CFF9D7500FDA477 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DB491242CFF9D7500FDA477 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D1836FE2D1975D200FE8D19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D1836FF2D1975D200FE8D19 /* WidgetKit.framework */,
+				1D1837012D1975D200FE8D19 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1DB491042CFF9D7400FDA477 = {
+			isa = PBXGroup;
+			children = (
+				1D18371A2D1981CA00FE8D19 /* AthanWidgetExtension.entitlements */,
+				1DB4910F2CFF9D7400FDA477 /* Athan */,
+				1DB491202CFF9D7500FDA477 /* AthanTests */,
+				1DB4912A2CFF9D7500FDA477 /* AthanUITests */,
+				1D1837032D1975D200FE8D19 /* AthanWidget */,
+				1D1836FE2D1975D200FE8D19 /* Frameworks */,
+				1DB4910E2CFF9D7400FDA477 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1DB4910E2CFF9D7400FDA477 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DB4910D2CFF9D7400FDA477 /* Athan.app */,
+				1DB4911D2CFF9D7500FDA477 /* AthanTests.xctest */,
+				1DB491272CFF9D7500FDA477 /* AthanUITests.xctest */,
+				1D1836FD2D1975D200FE8D19 /* AthanWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D1836FC2D1975D200FE8D19 /* AthanWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D1837152D1975D300FE8D19 /* Build configuration list for PBXNativeTarget "AthanWidgetExtension" */;
+			buildPhases = (
+				1D1836F92D1975D200FE8D19 /* Sources */,
+				1D1836FA2D1975D200FE8D19 /* Frameworks */,
+				1D1836FB2D1975D200FE8D19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1D1837032D1975D200FE8D19 /* AthanWidget */,
+			);
+			name = AthanWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = AthanWidgetExtension;
+			productReference = 1D1836FD2D1975D200FE8D19 /* AthanWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		1DB4910C2CFF9D7400FDA477 /* Athan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DB491312CFF9D7500FDA477 /* Build configuration list for PBXNativeTarget "Athan" */;
+			buildPhases = (
+				1DB491092CFF9D7400FDA477 /* Sources */,
+				1DB4910A2CFF9D7400FDA477 /* Frameworks */,
+				1DB4910B2CFF9D7400FDA477 /* Resources */,
+				1D1837182D1975D300FE8D19 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D1837122D1975D300FE8D19 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1DB4910F2CFF9D7400FDA477 /* Athan */,
+			);
+			name = Athan;
+			packageProductDependencies = (
+			);
+			productName = Athan;
+			productReference = 1DB4910D2CFF9D7400FDA477 /* Athan.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1DB4911C2CFF9D7500FDA477 /* AthanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DB491342CFF9D7500FDA477 /* Build configuration list for PBXNativeTarget "AthanTests" */;
+			buildPhases = (
+				1DB491192CFF9D7500FDA477 /* Sources */,
+				1DB4911A2CFF9D7500FDA477 /* Frameworks */,
+				1DB4911B2CFF9D7500FDA477 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DB4911F2CFF9D7500FDA477 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1DB491202CFF9D7500FDA477 /* AthanTests */,
+			);
+			name = AthanTests;
+			packageProductDependencies = (
+			);
+			productName = AthanTests;
+			productReference = 1DB4911D2CFF9D7500FDA477 /* AthanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1DB491262CFF9D7500FDA477 /* AthanUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DB491372CFF9D7500FDA477 /* Build configuration list for PBXNativeTarget "AthanUITests" */;
+			buildPhases = (
+				1DB491232CFF9D7500FDA477 /* Sources */,
+				1DB491242CFF9D7500FDA477 /* Frameworks */,
+				1DB491252CFF9D7500FDA477 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DB491292CFF9D7500FDA477 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1DB4912A2CFF9D7500FDA477 /* AthanUITests */,
+			);
+			name = AthanUITests;
+			packageProductDependencies = (
+			);
+			productName = AthanUITests;
+			productReference = 1DB491272CFF9D7500FDA477 /* AthanUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1DB491052CFF9D7400FDA477 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					1D1836FC2D1975D200FE8D19 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					1DB4910C2CFF9D7400FDA477 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					1DB4911C2CFF9D7500FDA477 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 1DB4910C2CFF9D7400FDA477;
+					};
+					1DB491262CFF9D7500FDA477 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 1DB4910C2CFF9D7400FDA477;
+					};
+				};
+			};
+			buildConfigurationList = 1DB491082CFF9D7400FDA477 /* Build configuration list for PBXProject "Athan" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1DB491042CFF9D7400FDA477;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1DB4910E2CFF9D7400FDA477 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1DB4910C2CFF9D7400FDA477 /* Athan */,
+				1DB4911C2CFF9D7500FDA477 /* AthanTests */,
+				1DB491262CFF9D7500FDA477 /* AthanUITests */,
+				1D1836FC2D1975D200FE8D19 /* AthanWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D1836FB2D1975D200FE8D19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DB4910B2CFF9D7400FDA477 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DB4911B2CFF9D7500FDA477 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DB491252CFF9D7500FDA477 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D1836F92D1975D200FE8D19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DB491092CFF9D7400FDA477 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DB491192CFF9D7500FDA477 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DB491232CFF9D7500FDA477 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D1837122D1975D300FE8D19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D1836FC2D1975D200FE8D19 /* AthanWidgetExtension */;
+			targetProxy = 1D1837112D1975D300FE8D19 /* PBXContainerItemProxy */;
+		};
+		1DB4911F2CFF9D7500FDA477 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DB4910C2CFF9D7400FDA477 /* Athan */;
+			targetProxy = 1DB4911E2CFF9D7500FDA477 /* PBXContainerItemProxy */;
+		};
+		1DB491292CFF9D7500FDA477 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DB4910C2CFF9D7400FDA477 /* Athan */;
+			targetProxy = 1DB491282CFF9D7500FDA477 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D1837162D1975D300FE8D19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = AthanWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L8U7A72VS3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AthanWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AthanWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.omarika.Athan.AthanWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1D1837172D1975D300FE8D19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = AthanWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L8U7A72VS3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AthanWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AthanWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.omarika.Athan.AthanWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1DB4912F2CFF9D7500FDA477 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1DB491302CFF9D7500FDA477 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1DB491322CFF9D7500FDA477 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Athan/Athan.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Athan/Preview Content\"";
+				DEVELOPMENT_TEAM = L8U7A72VS3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.omarika.Athan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1DB491332CFF9D7500FDA477 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Athan/Athan.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Athan/Preview Content\"";
+				DEVELOPMENT_TEAM = L8U7A72VS3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.omarika.Athan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1DB491352CFF9D7500FDA477 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L8U7A72VS3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.omarika.AthanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Athan.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Athan";
+			};
+			name = Debug;
+		};
+		1DB491362CFF9D7500FDA477 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L8U7A72VS3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.omarika.AthanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Athan.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Athan";
+			};
+			name = Release;
+		};
+		1DB491382CFF9D7500FDA477 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L8U7A72VS3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.omarika.AthanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Athan;
+			};
+			name = Debug;
+		};
+		1DB491392CFF9D7500FDA477 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L8U7A72VS3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.omarika.AthanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Athan;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D1837152D1975D300FE8D19 /* Build configuration list for PBXNativeTarget "AthanWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D1837162D1975D300FE8D19 /* Debug */,
+				1D1837172D1975D300FE8D19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DB491082CFF9D7400FDA477 /* Build configuration list for PBXProject "Athan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DB4912F2CFF9D7500FDA477 /* Debug */,
+				1DB491302CFF9D7500FDA477 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DB491312CFF9D7500FDA477 /* Build configuration list for PBXNativeTarget "Athan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DB491322CFF9D7500FDA477 /* Debug */,
+				1DB491332CFF9D7500FDA477 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DB491342CFF9D7500FDA477 /* Build configuration list for PBXNativeTarget "AthanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DB491352CFF9D7500FDA477 /* Debug */,
+				1DB491362CFF9D7500FDA477 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DB491372CFF9D7500FDA477 /* Build configuration list for PBXNativeTarget "AthanUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DB491382CFF9D7500FDA477 /* Debug */,
+				1DB491392CFF9D7500FDA477 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1DB491052CFF9D7400FDA477 /* Project object */;
+}
