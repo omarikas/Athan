@@ -46,11 +46,11 @@ func timeUntilNextPrayer(currentTime: Date, timings: Timings) -> String {
     
     // Convert prayer times to Date objects
     let prayerTimes: [(String, Date)] = [
-            ("Fajr", dateFormatter.date(from: timings.fajr)!),
-            ("Dhuhr", dateFormatter.date(from: timings.dhuhr)!),
-            ("Asr", dateFormatter.date(from: timings.asr)!),
-            ("Maghrib", dateFormatter.date(from: timings.maghrib)!),
-            ("Isha", dateFormatter.date(from: timings.isha)!)
+        ("Fajr", dateFormatter.date(from: timings.fajr)!),
+        ("Dhuhr", dateFormatter.date(from: timings.dhuhr)!),
+        ("Asr", dateFormatter.date(from: timings.asr)!),
+        ("Maghrib", dateFormatter.date(from: timings.maghrib)!),
+        ("Isha", dateFormatter.date(from: timings.isha)!)
         ]
         
         // Sort the prayer times by Date
@@ -92,32 +92,120 @@ func timeUntilNextPrayer(currentTime: Date, timings: Timings) -> String {
     
     return "N/A"
 }
+// This file was generated from JSON Schema using quicktype, do not modify it directly.
+// To parse the JSON, add this file to your project and do:
+//
+//   let welcome = try? JSONDecoder().decode(Welcome.self, from: jsonData)
 
+import Foundation
 
-struct PrayerTimesResponse: Codable {
+// MARK: - Welcome
+struct Welcome: Codable {
     let code: Int?
     let status: String?
-    let data: PrayerTimesData?
+    let data: DataClass?
 }
 
-struct PrayerTimesData: Codable {
+// MARK: - DataClass
+struct DataClass: Codable {
     let timings: Timings
-    let date: PrayerDate
+    let date: DateClass
     let meta: Meta
 }
 
+// MARK: - DateClass
+struct DateClass: Codable {
+    let readable, timestamp: String
+    let hijri: Hijri
+    let gregorian: Gregorian
+}
+
+// MARK: - Gregorian
+struct Gregorian: Codable {
+    let date, format, day: String
+    let weekday: GregorianWeekday
+    let month: GregorianMonth
+    let year: String
+    let designation: Designation
+}
+
+// MARK: - Designation
+struct Designation: Codable {
+    let abbreviated, expanded: String
+}
+
+// MARK: - GregorianMonth
+struct GregorianMonth: Codable {
+    let number: Int
+    let en: String
+}
+
+// MARK: - GregorianWeekday
+struct GregorianWeekday: Codable {
+    let en: String
+}
+
+// MARK: - Hijri
+struct Hijri: Codable {
+    let date, format: String
+    let day: Int
+    let weekday: HijriWeekday
+    let month: HijriMonth
+    let year: Int
+    let designation: Designation
+    let holidays: [JSONAny]
+    let method: String
+}
+
+// MARK: - HijriMonth
+struct HijriMonth: Codable {
+    let number: Int
+    let en, ar: String
+    let days: Int
+}
+
+// MARK: - HijriWeekday
+struct HijriWeekday: Codable {
+    let en, ar: String
+}
+
+// MARK: - Meta
+struct Meta: Codable {
+    let latitude, longitude: Double
+    let timezone: String
+    let method: Method
+    let latitudeAdjustmentMethod, midnightMode, school: String
+    let offset: [String: Int]
+}
+
+// MARK: - Method
+struct Method: Codable {
+    let id: Int
+    let name: String
+    let params: Params
+    let location: Location
+}
+
+// MARK: - Location
+struct Location: Codable {
+    let latitude, longitude: Double
+}
+
+// MARK: - Params
+struct Params: Codable {
+    let fajr, isha: Double
+
+    enum CodingKeys: String, CodingKey {
+        case fajr = "Fajr"
+        case isha = "Isha"
+    }
+}
+
+// MARK: - Timings
 struct Timings: Codable {
-    let fajr: String
-    let sunrise: String
-    let dhuhr: String
-    let asr: String
-    let sunset: String
-    let maghrib: String
-    let isha: String
-    let imsak: String
-    let midnight: String
-    let firstthird: String
-    let lastthird: String
+    let fajr, sunrise, dhuhr, asr: String
+    let sunset, maghrib, isha, imsak: String
+    let midnight, firstthird, lastthird: String
 
     enum CodingKeys: String, CodingKey {
         case fajr = "Fajr"
@@ -134,92 +222,257 @@ struct Timings: Codable {
     }
 }
 
-struct PrayerDate: Codable {
-    let readable: String
-    let timestamp: String
-    let hijri: HijriDate
-    let gregorian: GregorianDate
-}
+// MARK: - Encode/decode helpers
 
-struct HijriDate: Codable {
-    let date: String
-    let format: String
-    let day: String
-    let weekday: Day
-    let month: Month
-    let year: String
-    let designation: Designation
-    let holidays: [String]
-}
+class JSONNull: Codable, Hashable {
 
-struct GregorianDate: Codable {
-    let date: String
-    let format: String
-    let day: String
-    let weekday: Day
-    let month: Month
-    let year: String
-    let designation: Designation
-}
+    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
+            return true
+    }
 
-struct Day: Codable {
-    let en: String
-    let ar: String?
-}
+    public var hashValue: Int {
+            return 0
+    }
 
-struct Month: Codable {
-    let number: Int
-    let en: String
-    let ar: String?
-}
+    public init() {}
 
-struct Designation: Codable {
-    let abbreviated: String
-    let expanded: String
-}
+    public required init(from decoder: Decoder) throws {
+            let container = try decoder.singleValueContainer()
+            if !container.decodeNil() {
+                    throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
+            }
+    }
 
-struct Meta: Codable {
-    let latitude: Double
-    let longitude: Double
-    let timezone: String
-    let method: Method
-    let latitudeAdjustmentMethod: String
-    let midnightMode: String
-    let school: String
-    let offset: [String: Int]
-}
-
-struct Method: Codable {
-    let id: Int
-    let name: String
-    let params: MethodParams
-    let location: Location
-}
-
-struct MethodParams: Codable {
-    let fajr: Double
-    let isha: Double
-
-    enum CodingKeys: String, CodingKey {
-        case fajr = "Fajr"
-        case isha = "Isha"
+    public func encode(to encoder: Encoder) throws {
+            var container = encoder.singleValueContainer()
+            try container.encodeNil()
     }
 }
 
-struct Location: Codable {
-    let latitude: Double
-    let longitude: Double
+class JSONCodingKey: CodingKey {
+    let key: String
+
+    required init?(intValue: Int) {
+            return nil
+    }
+
+    required init?(stringValue: String) {
+            key = stringValue
+    }
+
+    var intValue: Int? {
+            return nil
+    }
+
+    var stringValue: String {
+            return key
+    }
+}
+
+class JSONAny: Codable {
+
+    let value: Any
+
+    static func decodingError(forCodingPath codingPath: [CodingKey]) -> DecodingError {
+            let context = DecodingError.Context(codingPath: codingPath, debugDescription: "Cannot decode JSONAny")
+            return DecodingError.typeMismatch(JSONAny.self, context)
+    }
+
+    static func encodingError(forValue value: Any, codingPath: [CodingKey]) -> EncodingError {
+            let context = EncodingError.Context(codingPath: codingPath, debugDescription: "Cannot encode JSONAny")
+            return EncodingError.invalidValue(value, context)
+    }
+
+    static func decode(from container: SingleValueDecodingContainer) throws -> Any {
+            if let value = try? container.decode(Bool.self) {
+                    return value
+            }
+            if let value = try? container.decode(Int64.self) {
+                    return value
+            }
+            if let value = try? container.decode(Double.self) {
+                    return value
+            }
+            if let value = try? container.decode(String.self) {
+                    return value
+            }
+            if container.decodeNil() {
+                    return JSONNull()
+            }
+            throw decodingError(forCodingPath: container.codingPath)
+    }
+
+    static func decode(from container: inout UnkeyedDecodingContainer) throws -> Any {
+            if let value = try? container.decode(Bool.self) {
+                    return value
+            }
+            if let value = try? container.decode(Int64.self) {
+                    return value
+            }
+            if let value = try? container.decode(Double.self) {
+                    return value
+            }
+            if let value = try? container.decode(String.self) {
+                    return value
+            }
+            if let value = try? container.decodeNil() {
+                    if value {
+                            return JSONNull()
+                    }
+            }
+            if var container = try? container.nestedUnkeyedContainer() {
+                    return try decodeArray(from: &container)
+            }
+            if var container = try? container.nestedContainer(keyedBy: JSONCodingKey.self) {
+                    return try decodeDictionary(from: &container)
+            }
+            throw decodingError(forCodingPath: container.codingPath)
+    }
+
+    static func decode(from container: inout KeyedDecodingContainer<JSONCodingKey>, forKey key: JSONCodingKey) throws -> Any {
+            if let value = try? container.decode(Bool.self, forKey: key) {
+                    return value
+            }
+            if let value = try? container.decode(Int64.self, forKey: key) {
+                    return value
+            }
+            if let value = try? container.decode(Double.self, forKey: key) {
+                    return value
+            }
+            if let value = try? container.decode(String.self, forKey: key) {
+                    return value
+            }
+            if let value = try? container.decodeNil(forKey: key) {
+                    if value {
+                            return JSONNull()
+                    }
+            }
+            if var container = try? container.nestedUnkeyedContainer(forKey: key) {
+                    return try decodeArray(from: &container)
+            }
+            if var container = try? container.nestedContainer(keyedBy: JSONCodingKey.self, forKey: key) {
+                    return try decodeDictionary(from: &container)
+            }
+            throw decodingError(forCodingPath: container.codingPath)
+    }
+
+    static func decodeArray(from container: inout UnkeyedDecodingContainer) throws -> [Any] {
+            var arr: [Any] = []
+            while !container.isAtEnd {
+                    let value = try decode(from: &container)
+                    arr.append(value)
+            }
+            return arr
+    }
+
+    static func decodeDictionary(from container: inout KeyedDecodingContainer<JSONCodingKey>) throws -> [String: Any] {
+            var dict = [String: Any]()
+            for key in container.allKeys {
+                    let value = try decode(from: &container, forKey: key)
+                    dict[key.stringValue] = value
+            }
+            return dict
+    }
+
+    static func encode(to container: inout UnkeyedEncodingContainer, array: [Any]) throws {
+            for value in array {
+                    if let value = value as? Bool {
+                            try container.encode(value)
+                    } else if let value = value as? Int64 {
+                            try container.encode(value)
+                    } else if let value = value as? Double {
+                            try container.encode(value)
+                    } else if let value = value as? String {
+                            try container.encode(value)
+                    } else if value is JSONNull {
+                            try container.encodeNil()
+                    } else if let value = value as? [Any] {
+                            var container = container.nestedUnkeyedContainer()
+                            try encode(to: &container, array: value)
+                    } else if let value = value as? [String: Any] {
+                            var container = container.nestedContainer(keyedBy: JSONCodingKey.self)
+                            try encode(to: &container, dictionary: value)
+                    } else {
+                            throw encodingError(forValue: value, codingPath: container.codingPath)
+                    }
+            }
+    }
+
+    static func encode(to container: inout KeyedEncodingContainer<JSONCodingKey>, dictionary: [String: Any]) throws {
+            for (key, value) in dictionary {
+                    let key = JSONCodingKey(stringValue: key)!
+                    if let value = value as? Bool {
+                            try container.encode(value, forKey: key)
+                    } else if let value = value as? Int64 {
+                            try container.encode(value, forKey: key)
+                    } else if let value = value as? Double {
+                            try container.encode(value, forKey: key)
+                    } else if let value = value as? String {
+                            try container.encode(value, forKey: key)
+                    } else if value is JSONNull {
+                            try container.encodeNil(forKey: key)
+                    } else if let value = value as? [Any] {
+                            var container = container.nestedUnkeyedContainer(forKey: key)
+                            try encode(to: &container, array: value)
+                    } else if let value = value as? [String: Any] {
+                            var container = container.nestedContainer(keyedBy: JSONCodingKey.self, forKey: key)
+                            try encode(to: &container, dictionary: value)
+                    } else {
+                            throw encodingError(forValue: value, codingPath: container.codingPath)
+                    }
+            }
+    }
+
+    static func encode(to container: inout SingleValueEncodingContainer, value: Any) throws {
+            if let value = value as? Bool {
+                    try container.encode(value)
+            } else if let value = value as? Int64 {
+                    try container.encode(value)
+            } else if let value = value as? Double {
+                    try container.encode(value)
+            } else if let value = value as? String {
+                    try container.encode(value)
+            } else if value is JSONNull {
+                    try container.encodeNil()
+            } else {
+                    throw encodingError(forValue: value, codingPath: container.codingPath)
+            }
+    }
+
+    public required init(from decoder: Decoder) throws {
+            if var arrayContainer = try? decoder.unkeyedContainer() {
+                    self.value = try JSONAny.decodeArray(from: &arrayContainer)
+            } else if var container = try? decoder.container(keyedBy: JSONCodingKey.self) {
+                    self.value = try JSONAny.decodeDictionary(from: &container)
+            } else {
+                    let container = try decoder.singleValueContainer()
+                    self.value = try JSONAny.decode(from: container)
+            }
+    }
+
+    public func encode(to encoder: Encoder) throws {
+            if let arr = self.value as? [Any] {
+                    var container = encoder.unkeyedContainer()
+                    try JSONAny.encode(to: &container, array: arr)
+            } else if let dict = self.value as? [String: Any] {
+                    var container = encoder.container(keyedBy: JSONCodingKey.self)
+                    try JSONAny.encode(to: &container, dictionary: dict)
+            } else {
+                    var container = encoder.singleValueContainer()
+                    try JSONAny.encode(to: &container, value: self.value)
+            }
+    }
 }
 
 class ItemViewModel: ObservableObject {
-    @Published var items: PrayerTimesResponse =  PrayerTimesResponse(code: nil,status: nil,data: nil)
+    @Published var items: Welcome =  Welcome(code: nil,status: nil,data: nil)
     @Published var isLoading = false
     @Published var errorMessage: String?
     
 
     func fetchData(longandlat : [Double]) {
         
-        guard let url = URL(string: "https://api.aladhan.com/v1/timings/22-12-2024?latitude=\(longandlat[0])4&longitude=\(longandlat[0])") else {
+        guard let url = URL(string: "https://api.aladhan.com/v1/timings/28-12-2024?latitude=\(longandlat[0])&longitude=\(longandlat[1])") else {
             errorMessage = "Invalid URL"
             return
         }
@@ -242,7 +495,8 @@ class ItemViewModel: ObservableObject {
                 }
 
                 do {
-                    self?.items = try JSONDecoder().decode(PrayerTimesResponse.self, from: data)
+                    print(data)
+                    self?.items = try JSONDecoder().decode(Welcome.self, from: data)
                     
                     
                     if let timings = self?.items.data?.timings{
@@ -458,7 +712,7 @@ func scheduleAthanNotifications(timings: Timings) {
         "Asr": timings.asr,
         "Maghrib": timings.maghrib,
         "Isha": timings.isha,
-        "test" :"18:50"
+       
     ]
     
     for (prayer, timeString) in prayerTimes {
