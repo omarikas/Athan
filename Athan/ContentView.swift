@@ -583,17 +583,22 @@ struct ItemListView: View {
     @State private var currentTime = Date()
     @State private var savedString: String = ""
     @State private var longandlat : [Double]=[]
+    @State private var start=Date.now
     var body: some View {
         
         TabView {
             
            
             ZStack{
-                Image(savedString) .resizable()
-                    .scaledToFit()
-                
+                TimelineView(.animation){tl  in
+                    let time=start.distance(to: tl.date)
+                    Image(savedString) .resizable()
+                        .scaledToFit()
+                }
                 VStack{
-                    VStack {
+                    VStack
+                    {TimelineView(.animation){tl in
+                        let time = start.distance(to: tl.date)
                         if viewModel.isLoading {
                             ProgressView("Loading...")
                         } else if let errorMessage = viewModel.errorMessage {
@@ -602,6 +607,8 @@ struct ItemListView: View {
                                 .multilineTextAlignment(.center)
                                 .padding()
                         } else if let timings = viewModel.items.data?.timings {
+                       
+                            
                             VStack{
                                 VStack(alignment:.leading, spacing: 20) {
                                     Text("Time Until Next Prayer: \(timeUntilNextPrayer(currentTime: currentTime, timings: timings))")
@@ -610,43 +617,58 @@ struct ItemListView: View {
                                     
                                 }.frame(alignment: .top)
                                     .padding()
-                                VStack(alignment:.leading, spacing: 20) {
+                                ZStack{Color.clear
+                                        .frame(width: 200,height:250) // Match the width of the VStack
+                                        .background(.thickMaterial)
+                                        .cornerRadius(12) // Apply corner radius
+                                        .blur(radius: 10)
+                                        .colorEffect(ShaderLibrary.wave(.float(time)))
                                     
-                                    if let fajr = convertTo12HourFormat(from24Hour: timings.fajr){
+                                    
+                                    
+                                    
+                                    
+                                    // Apply distortion (e.g., blur effect)
+                                    
+                                    VStack(alignment:.leading, spacing: 20) {
                                         
-                                        Text("Fajr: \(fajr)")
-                                        
-                                    }
-                                    if let fajr = convertTo12HourFormat(from24Hour: timings.dhuhr){
-                                        
-                                        Text("Duhr: \(fajr)")
-                                        
-                                    }
-                                    if let fajr = convertTo12HourFormat(from24Hour: timings.asr){
-                                        
-                                        Text("Asr: \(fajr)")
-                                        
-                                    }
-                                    if let fajr = convertTo12HourFormat(from24Hour: timings.maghrib){
-                                        
-                                        Text("Maghrib: \(fajr)")
-                                        
-                                    }
-                                    if let fajr = convertTo12HourFormat(from24Hour: timings.isha){
-                                        
-                                        Text("Isha: \(fajr)")
-                                        
-                                    }
-                                }.padding()
-                                    .frame(width: 200)
-                                    .background(.ultraThinMaterial)
-                                    .cornerRadius(12)
-                                    .scaleEffect(1.2)
+                                        if let fajr = convertTo12HourFormat(from24Hour: timings.fajr){
+                                            
+                                            Text("Fajr: \(fajr)")
+                                            
+                                        }
+                                        if let fajr = convertTo12HourFormat(from24Hour: timings.dhuhr){
+                                            
+                                            Text("Duhr: \(fajr)")
+                                            
+                                        }
+                                        if let fajr = convertTo12HourFormat(from24Hour: timings.asr){
+                                            
+                                            Text("Asr: \(fajr)")
+                                            
+                                        }
+                                        if let fajr = convertTo12HourFormat(from24Hour: timings.maghrib){
+                                            
+                                            Text("Maghrib: \(fajr)")
+                                            
+                                        }
+                                        if let fajr = convertTo12HourFormat(from24Hour: timings.isha){
+                                            
+                                            Text("Isha: \(fajr)")
+                                            
+                                        }
+                                    }.padding()
+                                        .frame(width: 200)
+                                       
+                                        .cornerRadius(12)
+                                        .scaleEffect(1.2)
+                                    
+                                }
                             }
-                        } else {
-                            Text("No data available.")
-                                .foregroundColor(.gray)
-                        }
+                                
+                            
+                        };
+                    }
                     }
                     
                     .ignoresSafeArea()

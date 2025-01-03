@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D0D2BC72D27803700E81145 /* Wave.metal in Sources */ = {isa = PBXBuildFile; fileRef = 1D0D2BC62D27803700E81145 /* Wave.metal */; };
 		1D1837002D1975D200FE8D19 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1836FF2D1975D200FE8D19 /* WidgetKit.framework */; };
 		1D1837022D1975D200FE8D19 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1837012D1975D200FE8D19 /* SwiftUI.framework */; };
 		1D1837132D1975D300FE8D19 /* AthanWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1D1836FD2D1975D200FE8D19 /* AthanWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -51,6 +52,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D0D2BC62D27803700E81145 /* Wave.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Wave.metal; sourceTree = "<group>"; };
 		1D1836FD2D1975D200FE8D19 /* AthanWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AthanWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D1836FF2D1975D200FE8D19 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		1D1837012D1975D200FE8D19 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -151,6 +153,7 @@
 		1DB491042CFF9D7400FDA477 = {
 			isa = PBXGroup;
 			children = (
+				1D0D2BC62D27803700E81145 /* Wave.metal */,
 				1D18371A2D1981CA00FE8D19 /* AthanWidgetExtension.entitlements */,
 				1DB4910F2CFF9D7400FDA477 /* Athan */,
 				1DB491202CFF9D7500FDA477 /* AthanTests */,
@@ -358,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D0D2BC72D27803700E81145 /* Wave.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,7 +593,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -622,7 +626,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
