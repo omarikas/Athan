@@ -9,7 +9,7 @@
 using namespace metal;
 
 [[stitchable]] half4 wave (float2 pos,half4 color, float t){
-    float angle =atan2(pos.y-125, pos.x+100)+t;
+    float angle =atan2(pos.y-125, pos.x-100)+t;
     return half4(sin(angle)/5,
                 sin(angle+2)/5,
                  sin(angle+4)/5,
